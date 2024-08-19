@@ -1,2 +1,3 @@
-# website
-didnt originally make this
+# percs.dev
+
+had to redo this shit

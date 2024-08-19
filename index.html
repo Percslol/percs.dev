@@ -1,56 +1,14 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script src="./js/animatedtitle.js"></script>
-	<script src="./js/jparticles.js"></script>
-	<script src="./js/particle.js"></script>
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="percs">
-	<meta property="og:image" content="/img/avatar.png">
-	<meta
-	name="og:description"
-	content="percs&#39; website"
-	/>
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/png" href="/img/avatar.png" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/avatar.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<title>p</title>
-	<link rel="stylesheet" href="./css/style.css"></link>
-</head>
-
-<body>
-	<div id="particles" style="position: fixed; width: 100%; height: 100%;"><canvas width="1920" height="916"></canvas></div>
-	<span class="center">
-
-		<img class="img" src="./img/avatar.png">
-		<div style="font-size: 180%;">Percs</div>
-		<div>14</div>
-		<div>"software engineer"</div>
-		<div>extremely annoying</div>
-		<div><img src="https://skillicons.dev/icons?i=py,js,ts,css,html,bash"></img></div>
-		<hr>
-	            <div class="social-icons">
-	                <a href="https://discord.com/users/767559339841683467" target="_blank">
-	                    <i class="fab fa-discord"></i>
-	                </a>
-	                <a href="https://github.com/Percslol" target="_blank">
-	                    <i class="fab fa-github"></i>
-	                </a>
-	                <a href="https://steamcommunity.com/id/percslol" target="_blank">
-	                    <i class="fab fa-steam"></i>
-	                </a>
-	            </div>
-		<hr>
-	</span>
-	<script>
-		new JParticles.particle('#particles', {
-			color: ['white', '#04F8E4'],
-			proximity: 80,
-			range: 120,
-			parallax: true,
-			maxSpeed: 0.55,
-     		minSpeed: 0.55
-		});
-	</script>
-</body>
+    <title>p</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
