@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Card from "./Card.svelte";
+  import Card from "../components/Card.svelte";
 </script>
 
 <div class="flex flex-col justify-center items-center h-screen">

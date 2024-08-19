@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { routes } from "./lib/routes";
+  import { routes } from "./routes";
   import Router from "svelte-spa-router";
-  import Navbar from "./lib/Navbar.svelte";
+  import Navbar from "./components/Navbar.svelte";
   function animateTitle(Title = "percs", delay = 400) {
     let counter = 0;
     let direction = true;

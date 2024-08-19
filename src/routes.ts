@@ -1,13 +1,11 @@
-import Bio from "./Bio.svelte"
-import Home from "./Home.svelte"
-import NotFound from "./NotFound.svelte"
-import Projects from "./Projects.svelte"
+import Bio from "./pages/Bio.svelte"
+import NotFound from "./pages/NotFound.svelte"
+import Projects from "./pages/Projects.svelte"
 export const routes = {
     // Exact path
-    '/': Home,
+    '/': Bio,
 
     // Using named parameters, with last being optional
-    '/bio': Bio,
     '/projects': Projects,
 
     // Catch-all
