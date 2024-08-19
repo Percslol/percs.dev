@@ -8,6 +8,6 @@ export default defineConfig({
     noExternal: ["svelte-hero-icons"]
   },
   server: { 
-    port: process.env.PORT! || 8080
+    port: process.env.PORT || 8080
   }
 })
