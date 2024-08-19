@@ -3,125 +3,63 @@
 
 <div class="navbar">
     <div class="left">
-        <div class="home"><a href="#/">Home</a></div>
-        <div class="projects"><a href="#/projects">Projects</a></div>
-        <div class="files"><a href="https://github.com/Percslol">GitHub</a></div>
-    </div>
-    <div class="center">
-        <div class="logo">percs</div>
+        <div class="logo">
+          <img src="/avatar.png" />
+          <p>percs</p>
+        </div>
     </div>
     <div class="right">
-        <div class="blank"><a href="#/404"></a></div>
-        <div class="contact"><a href="#/404">Contact</a></div>
-        <div class="about"><a href="#/404">About</a></div>
+      <div class="home"><a href="#/">Home</a></div>
+      <div class="projects"><a href="#/projects">Projects</a></div>
+      <div class="files"><a href="https://github.com/Percslol">GitHub</a></div>
     </div>
 </div>
 
 <style>
 .navbar {
-  color: rgba(255, 255, 255, 0.87);
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-}
-.navbar > .left {
-  margin-left: 20px;
-}
-.navbar > .right {
-  margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
 }
 
-.left, .right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  flex-shrink: 1;
-  transition: 250ms ease-in-out;
+.navbar .left .logo p {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-@media (max-width: 880px) {
-  .center {
-    display: none;
-  }
+.navbar .left .logo img {
+    margin-right: 10px;
+    height: 40px;
 }
 
-
-@media (max-width: 800px) {
-  .left, .right {
-    gap: 1.5rem;
-  }
-}
-@media (max-width: 690px) {
-  .left, .right {
-    gap: 0.5rem;
-  }
-}
-@media (max-width: 618px) {
-  .files, .about {
-    display: none;
-  }
-  .left, .right {
-    gap: 0.25rem;
-  }
-}
-@media (max-width: 430px) {
-  .left, .right {
-    gap: 0.15rem;
-  }
-  .left {
-    margin-left: 0px !important;
-  }
-  .right {
-    margin-right: 0px !important;
-  }
-}
-@media (max-width: 400px) {
-  .left > * > a, .right > * > a {
-    padding: 5px;
-  }
+.navbar .right {
+    display: flex;
+    gap: 20px;
 }
 
-@media (max-width: 380px) {
-  .navbar {
-    font-size: 15px;
-  }
-}
-@media (max-width: 360px) {
-  .navbar {
-    font-size: 13px;
-  }
-}
-@media (max-width: 340px) {
-  .navbar {
-    font-size: 11px;
-  }
-}
-@media (max-width: 300px) {
-  .navbar {
-    font-size: 10px;
-  }
+.navbar .right a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.left > * > a, .right > * > a {
-  text-decoration: none;
-  color: white;
-  transition: 250ms ease-in-out;
-  padding: 15px;
+.navbar .right a:hover {
+    color: #12f39d;
 }
 
-.logo {
-  font-weight: 700;
-}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.left > *, .right > * {
-  transition: 250ms ease-in-out;
-}
-
-.left *:hover, .right > *:hover {
-  color: #aaaaaa;
+    .navbar .right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
 }
 </style>

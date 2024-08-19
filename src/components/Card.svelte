@@ -1,6 +1,7 @@
 <script>
   export let name;
   export let description;
+  export let language;
   export let githubURL = undefined;
 </script>
 
@@ -11,6 +12,9 @@
   <p class="text-white">{description}</p>
   <div class="flex justify-center items-center">
     <slot />
+    {#if language}
+      <img src="https://skillicons.dev/icons?i={language}">
+    {/if}
     {#if githubURL}
       <a
         href={githubURL}
@@ -18,5 +22,6 @@
         >GitHub</a
       >
     {/if}
+    
   </div>
 </div>

@@ -2,21 +2,21 @@
   import { routes } from "./routes";
   import Router from "svelte-spa-router";
   import Navbar from "./components/Navbar.svelte";
-  function animateTitle(Title = "percs", delay = 400) {
+  function animateTitle(title = "percs", delay = 400) {
     let counter = 0;
     let direction = true;
     let newtitle
     let aniTitle = setInterval(function () {
-        if (counter == Title.length)
+        if (counter == title.length)
             direction = false;
         if ((counter as any) == false)
             direction = true;
         counter = (direction == true) ? ++counter : --counter;
-        newtitle = (counter == 0) ? Title.slice(0,1) : Title.slice(0, counter);
+        newtitle = (counter == 0) ? title.slice(0,1) : title.slice(0, counter);
         document.title = newtitle;
     }, delay)
-}
-animateTitle("percs",400);
+  }
+  animateTitle();
 </script>
 
 <main class="overflow-hidden">
