@@ -4,7 +4,7 @@
 <div class="navbar">
     <div class="left">
         <div class="logo">
-          <img src="/avatar.png" />
+          <img alt="avatar" src="/avatar.png" />
         </div>
     </div>
     <div class="right">

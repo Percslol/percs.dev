@@ -9,16 +9,19 @@
     <Card
       name="percs.dev"
       description="self explanatory"
+      language="ts,svelte"
       githubURL="https://github.com/Percslol/percs.dev"
     />
     <Card
     name="AnuraOS"
     description="AnuraOS is the next-gen webOS and development environment with full Linux emulation."
+    language="ts"
     githubURL="https://github.com/MercuryWorkshop/AnuraOS"
     />
     <Card
     name="Ultraviolet"
     description="A highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers."
+    language="js"
     githubURL="https://github.com/titaniumnetwork-dev/Ultraviolet"
     />
   </div>

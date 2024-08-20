@@ -27,7 +27,7 @@
       {#each description.split("\n") as desc}
         <p class="text-gray-200 mt-2">{desc}</p>
       {/each}
-      <img src="https://skillicons.dev/icons?i=py,js,ts,css,html,bash">
+      <img alt="languageIcons" src="https://skillicons.dev/icons?i=py,js,ts,css,html,bash">
       <div class="mt-4 flex items-center justify-center">
         <Icon src={Link} class="mr-2" size="20" />
         {#each socials as social}

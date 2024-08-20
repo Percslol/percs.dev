@@ -13,14 +13,14 @@
   <div class="flex justify-center items-center">
     <slot />
     {#if language}
-      <img src="https://skillicons.dev/icons?i={language}">
+      <img alt="languagesIcon" src="https://skillicons.dev/icons?i={language}">
     {/if}
     {#if githubURL}
       <a
         href={githubURL}
-        class="text-blue-500 hover:text-blue-700 font-semibold bottom-0 absolute flex justify-center items-center"
+        class="text-blue-500 hover:text-blue-700 font-semibold bottom-0 absolute flex justify-center items-center text-2xl"
       >
-        GitHub
+      <i class="fab fa-github"></i>
       </a>
     {/if}
     
