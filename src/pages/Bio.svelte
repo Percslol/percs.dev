@@ -28,15 +28,16 @@
         <p class="text-gray-200 mt-2">{desc}</p>
       {/each}
       <img src="https://skillicons.dev/icons?i=py,js,ts,css,html,bash">
-      <div class="mt-4 flex items-center">
+      <div class="mt-4 flex items-center justify-center">
         <Icon src={Link} class="mr-2" size="20" />
         {#each socials as social}
           <a
             href={social.link}
             target="_blank"
-            class="text-blue-500 hover:text-blue-700 font-semibold mr-2"
-            > <i class="fab fa-{social.name.toLowerCase()}"></i></a
-          >
+            class="text-blue-500 hover:text-blue-700 font-semibold mr-2 size text-xl"
+            > 
+            <i class="fab fa-{social.name.toLowerCase()}"></i>
+            </a>
         {/each}
       </div>
     </div>

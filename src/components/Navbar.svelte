@@ -5,7 +5,6 @@
     <div class="left">
         <div class="logo">
           <img src="/avatar.png" />
-          <p>percs</p>
         </div>
     </div>
     <div class="right">
@@ -22,11 +21,6 @@
     align-items: center;
     padding: 10px 20px;
     color: white;
-}
-
-.navbar .left .logo p {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .navbar .left .logo img {

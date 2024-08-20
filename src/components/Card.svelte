@@ -19,8 +19,9 @@
       <a
         href={githubURL}
         class="text-blue-500 hover:text-blue-700 font-semibold bottom-0 absolute flex justify-center items-center"
-        >GitHub</a
       >
+        GitHub
+      </a>
     {/if}
     
   </div>
