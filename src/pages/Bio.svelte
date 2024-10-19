@@ -39,6 +39,14 @@
             <i class="fab fa-{social.name.toLowerCase()}"></i>
             </a>
         {/each}
+          <a
+          rel="me" 
+          href="https://fedi.omada.cafe/@percs"
+          target="_blank"
+          class="text-blue-500 hover:text-blue-700 font-semibold mr-2 size text-xl"
+          > 
+          <i class="fab fa-mastodon"></i>
+          </a>
       </div>
     </div>
   </div>
