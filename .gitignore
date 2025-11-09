@@ -1,0 +1,40 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+server/config.js
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+cache/
+
+# song cache default directory
+music/
+tests/slsk-downloads/*
+tests/yt-dlp/*
+tests/soundcloud/*
+tests/qobuz/*
+
+# slskd app directory
+slskd/
+
+# streamline db 
+streamline.db

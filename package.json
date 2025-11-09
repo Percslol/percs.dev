@@ -1,0 +1,27 @@
+{
+  "name": "create-dreamland-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:client": "tsc && vite build --ssrManifest .vite/ssr-manifest.json --outDir dist/static",
+		"build:server": "tsc && vite build --ssr src/main-server.ts --outDir dist/server",
+		"build": "pnpm run build:client && pnpm run build:server && node prerender.js",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint ./src/ --fix"
+  },
+  "dependencies": {
+    "dreamland": "^0.1.2"
+  },
+  "devDependencies": {
+    "@literals/rollup-plugin-html-css-minifier": "^3.0.1",
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
+  }
+}
