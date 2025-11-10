@@ -4,7 +4,7 @@ const ContactPage: Component = function () {
 	return (
 		<div>
 			<p>contact me:</p>
-			<span>you can contact me at any of the following</span>
+			<span>you can contact me at any of the following, though i might be slow to respond on some.</span>
 			<ul>
 				<li>
 					<a href="mailto:me@percs.dev">email</a>
