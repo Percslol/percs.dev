@@ -1,7 +1,6 @@
 import { Router, router, Route } from "dreamland/router";
 import { type Component, type Stateful, createState } from "dreamland/core";
 
-import "./styles.css";
 import Layout from "./layout/Layout";
 import Homepage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";

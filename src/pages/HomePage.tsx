@@ -6,7 +6,7 @@ const Homepage: Component = function () {
 			<img src="/pfp.webp" alt="percs" height="128px" weight="128px" />
 			<section>
 				<h3>about me</h3>
-				<p>hey!</p>
+				<p>hey! welcome to my little corner of the internet :3</p>
 				<p>i'm percs, a 16 y/o developer living in texas!</p>
 				<p>
 					i make cool software with{" "}
@@ -40,14 +40,17 @@ const Homepage: Component = function () {
 				<a href="https://velzie.rip">
 					<img src="https://velzie.rip/88x31.png" alt="velzie" />
 				</a>
-                <a href="https://wearr.dev">
-                    <img src="https://wearr.dev/88x31.gif" alt="wearr" />
-                </a>
-                <a href="https://foxmoss.com">
-                    <img src="https://foxmoss.com/foxmossbutton.png" alt="foxmoss" />
-                </a>
+				<a href="https://wearr.dev">
+					<img src="https://wearr.dev/88x31.gif" alt="wearr" />
+				</a>
+				<a href="https://foxmoss.com">
+					<img src="https://foxmoss.com/foxmossbutton.png" alt="foxmoss" />
+				</a>
 				<a href="https://errorcodezero.dev/">
-					<img src="https://errorcodezero.dev/button.png" alt="errorcodezero's button" />
+					<img
+						src="https://errorcodezero.dev/button.png"
+						alt="errorcodezero's button"
+					/>
 				</a>
 			</section>
 		</div>

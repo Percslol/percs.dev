@@ -1,16 +1,25 @@
 html {
-	--main-hue: 220;
-	--base-hsl: var(--main-hue), 20%, 5%;
+	--base: hsl(var(--base-hsl));
+	--alternate: hsl(var(--alternate-hsl));
 }
 
 html {
-	background: hsl(var(--base-hsl));
+	--main-hue: 220;
+
+	--base-hsl: var(--main-hue), 20%, 20%;
+	--bg-light: var(--main-hue), 20%, 5%;
+	--alternate-hsl: var(--main-hue), 100%, 83%;
+}
+
+html {
+	background: hsl(var(--bg-light));
 	color: white;
 }
 
 body {
 	font-family: Inter, sans-serif;
 }
+
 #app {
 	display: flex;
 	flex-direction: column;
@@ -21,5 +30,5 @@ body {
 }
 
 a {
-	color: hsl(var(--main-hue), 100%, 83%);
+	color: var(--alternate);
 }

@@ -44,9 +44,26 @@ image.onload = () => {
 	// Apply dithering
 	const dithered = atkinson(grayscale, width);
 
+	// Get colors from CSS
+	const style = getComputedStyle(document.documentElement);
+	const parseHsl = (hsl: string) => {
+		const [h, s, l] = hsl.split(",").map(parseFloat);
+		const a = (s / 100) * Math.min(l / 100, 1 - l / 100);
+		const f = (n: number) => {
+			const k = (n + h / 30) % 12;
+			return Math.round(
+				(l / 100 - a * Math.max(Math.min(k - 3, 9 - k, 1), -1)) * 255
+			);
+		};
+		return [f(0), f(8), f(4)];
+	};
+
+	const dark = parseHsl(style.getPropertyValue("--base-hsl"));
+	const light = parseHsl(style.getPropertyValue("--bg-light"));
+
 	// Apply colors
 	for (let i = 0; i < dithered.length; i++) {
-		const [r, g, b] = dithered[i] ? [128, 128, 128] : [0, 0, 0];
+		const [r, g, b] = dithered[i] ? light : dark;
 		data[i * 4] = r;
 		data[i * 4 + 1] = g;
 		data[i * 4 + 2] = b;
