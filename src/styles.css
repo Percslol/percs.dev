@@ -1,10 +1,13 @@
 html {
 	--main-hue: 220;
 	--base-hsl: var(--main-hue), 20%, 5%;
+}
 
+html {
 	background: hsl(var(--base-hsl));
 	color: white;
 }
+
 body {
 	font-family: Inter, sans-serif;
 }
