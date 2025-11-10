@@ -20,7 +20,7 @@ Layout.style = css`
 		height: 100%;
 		width: calc(100%);
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 	}
 
 	main {
