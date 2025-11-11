@@ -1,4 +1,5 @@
 import { css, type Component } from "dreamland/core";
+import LastFmNowPlaying from "../components/LastFm";
 
 const Homepage: Component = function () {
 	return (
@@ -16,6 +17,10 @@ const Homepage: Component = function () {
 				<p>i'm interested in webdev, hardware, and architecture design.</p>
 				<p>i'm fluent in javascript, and i'm also learning rust and c.</p>
 			</section>
+			<section>
+				<h3>music</h3>
+				<LastFmNowPlaying username={"Percslol"} />
+			</section>
 			<section class="buttons">
 				<h3>buttons</h3>
 				<a href="https://mercurywork.shop">
@@ -30,6 +35,7 @@ const Homepage: Component = function () {
 						alt="website button for omada.cafe, a private and secure alternative provider."
 					/>
 				</a>
+				<hr />
 				<a href="https://bomberfish.ca">
 					<img
 						src="https://bomberfish.ca/button.gif"
