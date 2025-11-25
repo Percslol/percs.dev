@@ -22,18 +22,14 @@ type LastFmState = {
 	track: LastFmTrack | null;
 };
 
-type LastFmRecentResponse = {
-	recenttracks?: {
-		track?: Array<{
-			name?: string;
-			artist?: { "#text"?: string; name?: string } | string;
-			album?: { "#text"?: string } | string;
-			image?: Array<{ size?: string; "#text"?: string }>;
-			url?: string;
-			"@attr"?: { nowplaying?: string };
-			date?: { uts?: string };
-		}>;
-	};
+type LastFmResponse = {
+	name?: string;
+	artist?: { "#text"?: string; name?: string } | string;
+	album?: { "#text"?: string } | string;
+	image?: Array<{ size?: string; "#text"?: string }>;
+	url?: string;
+	"@attr"?: { nowplaying?: string };
+	date?: { uts?: string };
 };
 
 const RELATIVE_TIME_WINDOWS: Array<{
@@ -113,25 +109,15 @@ const LastFmView: Component<LastFmProps, LastFmState> = function (cx) {
 	};
 
 	const fetchRecentTrack = async () => {
-		const apiKey = import.meta.env.VITE_LASTFM_API_KEY;
-		if (!apiKey) {
-			this.loading = false;
-			this.error = "last.fm not configured";
-			return;
-		}
 		try {
-			const endpoint =
-				"https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&format=json&limit=1&extended=1" +
-				`&user=${encodeURIComponent(this.username)}` +
-				`&api_key=${encodeURIComponent(apiKey)}`;
+			const endpoint = "https://lastfm.percs.dev"
 			const response = await fetch(endpoint, {
 				headers: { Accept: "application/json" },
 			});
 			if (!response.ok) {
 				throw new Error(`status ${response.status}`);
 			}
-			const payload = (await response.json()) as LastFmRecentResponse;
-			const rawTrack = payload.recenttracks?.track?.[0];
+			const rawTrack = (await response.json()) as LastFmResponse;
 			if (!rawTrack || !rawTrack.name || !rawTrack.url) {
 				this.track = null;
 				this.error = null;
