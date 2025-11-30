@@ -1,4 +1,4 @@
-import { type Component } from "dreamland/core";
+import { css, type Component } from "dreamland/core";
 export const WebButton: Component<
 	{
 		src: string;
@@ -22,6 +22,19 @@ export const WebButton: Component<
 				alt={this.alt || "A web button."}
 				title={this.title || this.alt || ""}
 			/>
-		</a>
-	);
+		</a>	);
 };
+
+WebButton.style = css`
+	:scope {
+		width: max-content;
+		height: max(31px, 2.3rem);
+		border: none !important;
+		display: inline-block;
+	}
+	img {
+		width: auto;
+		height: 100%;
+	}
+`;
+
