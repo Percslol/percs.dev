@@ -1,10 +1,5 @@
 import { css, type Component } from "dreamland/core";
 
-type LastFmProps = {
-	username: string;
-	apiKey?: string;
-};
-
 type LastFmTrack = {
 	name: string;
 	artist: string;
@@ -14,12 +9,6 @@ type LastFmTrack = {
 	nowPlaying: boolean;
 	playedAt?: Date;
 	playedAgo?: string;
-};
-
-type LastFmState = {
-	loading: boolean;
-	error: string | null;
-	track: LastFmTrack | null;
 };
 
 type LastFmResponse = {
@@ -43,10 +32,16 @@ const RELATIVE_TIME_WINDOWS: Array<{
 	{ limit: 60 * 60 * 24 * 7, divisor: 60 * 60 * 24, unit: "day" },
 	{ limit: 60 * 60 * 24 * 30, divisor: 60 * 60 * 24 * 7, unit: "week" },
 	{ limit: 60 * 60 * 24 * 365, divisor: 60 * 60 * 24 * 30, unit: "month" },
-	{ limit: Number.POSITIVE_INFINITY, divisor: 60 * 60 * 24 * 365, unit: "year" },
+	{
+		limit: Number.POSITIVE_INFINITY,
+		divisor: 60 * 60 * 24 * 365,
+		unit: "year",
+	},
 ];
 
-const relativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const relativeFormatter = new Intl.RelativeTimeFormat("en", {
+	numeric: "auto",
+});
 
 const formatRelativeTime = (date: Date): string => {
 	const secondsFromNow = Math.round((date.getTime() - Date.now()) / 1000);
@@ -54,7 +49,9 @@ const formatRelativeTime = (date: Date): string => {
 	for (const window of RELATIVE_TIME_WINDOWS) {
 		if (absoluteSeconds < window.limit) {
 			const value = Math.round(secondsFromNow / window.divisor);
-			return value === 0 ? "just now" : relativeFormatter.format(value, window.unit);
+			return value === 0
+				? "just now"
+				: relativeFormatter.format(value, window.unit);
 		}
 	}
 	return date.toLocaleString(undefined, {
@@ -72,12 +69,12 @@ const selectArtwork = (
 	}
 	const preferredSizes = ["extralarge", "large", "medium", "small"];
 	for (const size of preferredSizes) {
-		const match = images.find(image => image.size === size && image["#text"]);
+		const match = images.find((image) => image.size === size && image["#text"]);
 		if (match?.["#text"]) {
 			return match["#text"];
 		}
 	}
-	const fallback = images.find(image => image["#text"]);
+	const fallback = images.find((image) => image["#text"]);
 	return fallback?.["#text"] || null;
 };
 
@@ -93,7 +90,9 @@ const getArtistName = (
 	return artist.name ?? artist["#text"] ?? "Unknown artist";
 };
 
-const getAlbumName = (album: { "#text"?: string } | string | undefined): string | null => {
+const getAlbumName = (
+	album: { "#text"?: string } | string | undefined
+): string | null => {
 	if (!album) {
 		return null;
 	}
@@ -103,15 +102,24 @@ const getAlbumName = (album: { "#text"?: string } | string | undefined): string 
 	return album["#text"] || null;
 };
 
-const LastFmView: Component<LastFmProps, LastFmState> = function (cx) {
+const LastFm: Component<
+	{
+		username: string;
+	},
+	{},
+	{
+		loading: boolean;
+		error: string | null;
+		track: LastFmTrack | null;
+	}
+> = function (cx) {
 	cx.mount = () => {
 		void fetchRecentTrack();
 	};
 
 	const fetchRecentTrack = async () => {
 		try {
-			const endpoint = "https://lastfm.percs.dev"
-			const response = await fetch(endpoint, {
+			const response = await fetch(`https://lastfm.percs.dev?=${this.username}`, {
 				headers: { Accept: "application/json" },
 			});
 			if (!response.ok) {
@@ -123,9 +131,10 @@ const LastFmView: Component<LastFmProps, LastFmState> = function (cx) {
 				this.error = null;
 			} else {
 				const isNowPlaying = rawTrack["@attr"]?.nowplaying === "true";
-				const playedAt = !isNowPlaying && rawTrack.date?.uts
-					? new Date(Number(rawTrack.date.uts) * 1000)
-					: undefined;
+				const playedAt =
+					!isNowPlaying && rawTrack.date?.uts
+						? new Date(Number(rawTrack.date.uts) * 1000)
+						: undefined;
 				this.track = {
 					name: rawTrack.name,
 					artist: getArtistName(rawTrack.artist),
@@ -176,13 +185,11 @@ const LastFmView: Component<LastFmProps, LastFmState> = function (cx) {
 						<p class="artist">by {track.artist}</p>
 						{track.album ? <p class="album">{track.album}</p> : null}
 						<p class="time">
-							{track.nowPlaying ? "listening now" : track.playedAgo ?? "earlier"}
+							{track.nowPlaying
+								? "listening now"
+								: (track.playedAgo ?? "earlier")}
 						</p>
-						<a
-							href={track.url}
-							target="_blank"
-							rel="noreferrer noopener"
-						>
+						<a href={track.url} target="_blank" rel="noreferrer noopener">
 							more info &gt;
 						</a>
 					</div>
@@ -191,14 +198,10 @@ const LastFmView: Component<LastFmProps, LastFmState> = function (cx) {
 		}
 	);
 
-	return (
-		<div>
-			{renderBody}
-		</div>
-	);
+	return <div>{renderBody}</div>;
 };
 
-LastFmView.style = css`
+LastFm.style = css`
 	:scope {
 		display: inline-flex;
 		flex-direction: column;
@@ -252,4 +255,4 @@ LastFmView.style = css`
 	}
 `;
 
-export default LastFmView;
+export default LastFm;

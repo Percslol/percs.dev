@@ -1,5 +1,6 @@
 import { css, type Component } from "dreamland/core";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout: Component<
 	{},
@@ -11,6 +12,7 @@ const Layout: Component<
 			<main this={use(this.container)}>
 				<fieldset>{use(this.outlet)}</fieldset>
 			</main>
+			<Footer />
 		</div>
 	);
 };

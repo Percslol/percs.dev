@@ -1,5 +1,6 @@
 import { css, type Component } from "dreamland/core";
-import LastFmNowPlaying from "../components/LastFm";
+import LastFm from "../components/LastFm";
+import { WebButton } from "../components/WebButton";
 
 const Homepage: Component = function () {
 	return (
@@ -19,52 +20,38 @@ const Homepage: Component = function () {
 			</section>
 			<section>
 				<h3>music</h3>
-				<LastFmNowPlaying username={"Percslol"} />
+				<LastFm username={"Percslol"} />
 			</section>
 			<section class="buttons">
 				<h3>buttons</h3>
-				<a href="https://mercurywork.shop">
-					<img src="/buttons/mercury.gif" alt="mercury workshop" />
-				</a>
-				<a href="https://dreamland.js.org">
-					<img src="/buttons/dreamland.png" alt="dreamland.js" />
-				</a>
-				<a href="https://omada.cafe/">
-					<img
-						src="https://omada.cafe/omada.gif"
-						alt="website button for omada.cafe, a private and secure alternative provider."
-					/>
-				</a>
+				<WebButton src="/buttons/mercury.gif" href="https://mercurywork.shop" title="mercury workshop" />
+				<WebButton src="/buttons/dreamland.png" href="https://dreamland.js.org" title="dreamland.js" />
+				<WebButton
+					src="https://omada.cafe/omada.gif"
+					href="https://omada.cafe/"
+					title="omada.cafe"
+				/>
 				<hr />
-				<a href="https://bomberfish.ca">
-					<img
-						src="https://bomberfish.ca/button.gif"
-						alt="BomberFish"
-						title="BomberFish"
-					/>
-				</a>
-				<a href="https://velzie.rip">
-					<img src="https://velzie.rip/88x31.png" alt="velzie" />
-				</a>
-				<a href="https://wearr.dev">
-					<img src="https://wearr.dev/88x31.gif" alt="wearr" />
-				</a>
-				<a href="https://foxmoss.com">
-					<img src="https://foxmoss.com/foxmossbutton.png" alt="foxmoss" />
-				</a>
-				<a href="https://errorcodezero.dev/">
-					<img
-						src="https://errorcodezero.dev/button.png"
-						alt="errorcodezero's button"
-					/>
-				</a>
+				<WebButton
+					src="https://bomberfish.ca/button.gif"
+					href="https://bomberfish.ca"
+					title="BomberFish"
+				/>
+				<WebButton src="https://velzie.rip/88x31.png" href="https://velzie.rip" title="velzie" />
+				<WebButton src="https://wearr.dev/88x31.gif" href="https://wearr.dev" title="wearr" />
+				<WebButton src="https://foxmoss.com/foxmossbutton.png" href="https://foxmoss.com" title="foxmoss" />
+				<WebButton
+					src="https://errorcodezero.dev/button.png"
+					href="https://errorcodezero.dev/"
+					title="errorcodezero"
+				/>
 			</section>
 		</div>
 	);
 };
 
 Homepage.style = css`
-	.buttons > a {
+	:global(.buttons > a) {
 		padding: 0.5em;
 	}
 `;

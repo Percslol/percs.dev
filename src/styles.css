@@ -3,7 +3,8 @@ html {
 	--alternate: hsl(var(--alternate-hsl));
 }
 
-html {
+:root {
+	color-scheme: dark;
 	--main-hue: 220;
 
 	--base-hsl: var(--main-hue), 20%, 20%;
