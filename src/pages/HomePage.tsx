@@ -39,7 +39,7 @@ const Homepage: Component = function () {
 					href="https://omada.cafe/"
 					title="omada.cafe"
 				/>
-				<WebButton 
+				<WebButton
 					src="https://login.corp.google.com/c/balls.gif"
 					href="https://login.corp.google.com"
 					title="Google Single Sign On"

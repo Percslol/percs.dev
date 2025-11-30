@@ -22,7 +22,8 @@ export const WebButton: Component<
 				alt={this.alt || "A web button."}
 				title={this.title || this.alt || ""}
 			/>
-		</a>	);
+		</a>
+	);
 };
 
 WebButton.style = css`
@@ -37,4 +38,3 @@ WebButton.style = css`
 		height: 100%;
 	}
 `;
-
