@@ -120,7 +120,7 @@ const LastFm: Component<
 	const fetchRecentTrack = async () => {
 		try {
 			const response = await fetch(
-				`https://lastfm.percs.dev?=${this.username}`,
+				`https://lastfm.percs.dev?user=${this.username}`,
 				{
 					headers: { Accept: "application/json" },
 				}

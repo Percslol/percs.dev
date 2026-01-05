@@ -75,10 +75,4 @@ const Homepage: Component = function () {
 	);
 };
 
-Homepage.style = css`
-	:global(.buttons > a) {
-		padding: 0.5em;
-	}
-`;
-
 export default Homepage;

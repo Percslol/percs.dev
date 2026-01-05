@@ -33,6 +33,9 @@ WebButton.style = css`
 		border: none !important;
 		display: inline-block;
 	}
+	a {
+		padding: 0.5em;
+	}
 	img {
 		width: auto;
 		height: 100%;
