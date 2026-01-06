@@ -1,4 +1,4 @@
-import { css, type Component } from "dreamland/core";
+import { type Component } from "dreamland/core";
 import LastFm from "../components/LastFm";
 import { WebButton } from "../components/WebButton";
 

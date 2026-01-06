@@ -3,7 +3,7 @@ import projects from "../Project";
 
 const Project: Component<{
 	project: any;
-}> = function (cx) {
+}> = function () {
 	return (
 		<div>
 			<section>
@@ -12,6 +12,7 @@ const Project: Component<{
 				{this.project.screenshot ? (
 					<img src={this.project.screenshot}></img>
 				) : null}
+				<br />
 				<a href={this.project.repo}>Source</a>
 				<a href={this.project.url}>Demo</a>
 			</section>
@@ -19,8 +20,12 @@ const Project: Component<{
 	);
 };
 Project.style = css`
-	a {
+	img, a {
 		padding: 0.5em;
+	}
+	img {
+		max-height: 40vh;
+		min-width: min(50rem, 70vw);
 	}
 `;
 const ProjectsPage: Component = function () {
