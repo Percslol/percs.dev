@@ -1,5 +1,5 @@
 import { css } from "dreamland/core";
-const Navbar = function () {
+const Footer = function () {
 	return (
 		<footer>
 			<div class="content" title={`built on ${__BUILD_DATE__}`}>
@@ -11,7 +11,7 @@ const Navbar = function () {
 	);
 };
 
-Navbar.style = css`
+Footer.style = css`
 	.content {
 		display: flex;
 		width: 98.7%;
@@ -24,4 +24,4 @@ Navbar.style = css`
 		font-size: 0.9rem;
 	}
 `;
-export default Navbar;
+export default Footer;
