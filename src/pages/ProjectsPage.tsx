@@ -31,7 +31,7 @@ Project.style = css`
 const ProjectsPage: Component = function () {
 	return (
 		<div>
-			{projects.map((project, index) => (
+			{projects.map((project) => (
 				<Project project={project} />
 			))}
 		</div>
