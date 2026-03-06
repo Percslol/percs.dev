@@ -7,7 +7,7 @@ html {
 	color-scheme: dark;
 	--main-hue: 220;
 
-	--base-hsl: var(--main-hue), 20%, 20%;
+	--base-hsl: var(--main-hue), 20%, 35%;
 	--bg-light: var(--main-hue), 20%, 5%;
 	--alternate-hsl: var(--main-hue), 100%, 83%;
 }

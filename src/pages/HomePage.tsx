@@ -5,7 +5,7 @@ import { WebButton } from "../components/WebButton";
 const Homepage: Component = function () {
 	return (
 		<div>
-			<img src="/pfp.webp" alt="percs" height="128px" weight="128px" />
+			<img src="/pfp.webp" alt="percs" height="128px" />
 			<section>
 				<h3>about me</h3>
 				<p>hey! welcome to my little corner of the internet :3</p>
@@ -20,7 +20,7 @@ const Homepage: Component = function () {
 			</section>
 			<section>
 				<h3>music</h3>
-				<LastFm username={"Percslol"} />
+				<LastFm username="Percslol" />
 			</section>
 			<section class="buttons">
 				<h3>buttons</h3>
