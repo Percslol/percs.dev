@@ -19,10 +19,10 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@literals/rollup-plugin-html-css-minifier": "^3.0.1",
-		"@types/node": "^25.4.0",
+		"@types/node": "^25.5.0",
 		"eslint": "^10.0.3",
 		"prettier": "^3.8.1",
 		"typescript": "^5.9.3",
-		"vite": "^7.3.1"
+		"vite": "^8.0.0"
 	}
 }
