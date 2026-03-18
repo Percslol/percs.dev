@@ -22,11 +22,11 @@ export default {
 		__BUILD_DATE__: JSON.stringify(new Date().toISOString()),
 	},
 	plugins: [
-		literalsHtmlCssMinifier({
-			include: ["src/**/*.tsx"],
-		}),
 		devSsr({
 			entry: "/src/main-server.ts",
+		}),
+		literalsHtmlCssMinifier({
+			include: ["src/**/*.tsx"],
 		}),
 	],
 } satisfies UserConfig;
