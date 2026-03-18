@@ -20,7 +20,7 @@
 		"@eslint/js": "^10.0.1",
 		"prettier": "^3.8.1",
 		"@literals/rollup-plugin-html-css-minifier": "^3.0.1",
-		"vite": "^8.0.0"
+		"vite": "^7.3.1"
 	},
 	"dependencies": {
 		"dreamland": "^0.1.3"

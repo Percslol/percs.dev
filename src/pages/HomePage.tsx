@@ -25,12 +25,12 @@ const Homepage: Component = function () {
 			<section class="buttons">
 				<h3>buttons</h3>
 				<WebButton
-					src="/buttons/mercury.gif"
+					src="https://mercurywork.shop/button.gif"
 					href="https://mercurywork.shop"
 					title="mercury workshop"
 				/>
 				<WebButton
-					src="/buttons/dreamland.png"
+					src="https://dreamland.js.org/button.png"
 					href="https://dreamland.js.org"
 					title="dreamland.js"
 				/>
