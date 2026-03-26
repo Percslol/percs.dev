@@ -1,8 +1,7 @@
+import { execSync } from "node:child_process";
 import type { UserConfig } from "vite";
 import { devSsr } from "dreamland/vite";
 import { literalsHtmlCssMinifier } from "@literals/rollup-plugin-html-css-minifier";
-
-import { execSync } from "node:child_process";
 
 export default {
 	define: {
