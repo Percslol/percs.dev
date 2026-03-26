@@ -3,6 +3,9 @@
 	"version": "0.0.0",
 	"private": true,
 	"type": "module",
+	"engines": {
+ 		"node": "24"
+  	},
 	"scripts": {
 		"dev": "vite",
 		"build": "pnpm run build:client && pnpm run build:server && node prerender.js",
@@ -14,12 +17,12 @@
 		"lint:fix": "eslint ./src/ --fix"
 	},
 	"devDependencies": {
-		"@types/node": "^25.5.0",
-		"typescript": "^6.0.2",
-		"eslint": "^10.0.3",
 		"@eslint/js": "^10.0.1",
-		"prettier": "^3.8.1",
 		"@literals/rollup-plugin-html-css-minifier": "^3.0.1",
+		"@types/node": "^25.5.0",
+		"eslint": "^10.1.0",
+		"prettier": "^3.8.1",
+		"typescript": "^6.0.2",
 		"vite": "^8.0.3"
 	},
 	"dependencies": {
