@@ -1,13 +1,10 @@
-import { css, type Component } from "dreamland/core";
-export const WebButton: Component<
-	{
+import { css, type FC } from "dreamland/core";
+function WebButton(this: FC<{
 		src: string;
 		href?: string;
 		alt?: string;
 		title?: string;
-	},
-	{}
-> = function () {
+	}>) {
 	this.href = this.href;
 
 	if (this.title) {
@@ -41,3 +38,4 @@ WebButton.style = css`
 		height: 100%;
 	}
 `;
+export default WebButton;

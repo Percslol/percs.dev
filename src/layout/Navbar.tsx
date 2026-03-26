@@ -1,7 +1,7 @@
 import { css } from "dreamland/core";
 import { Link } from "dreamland/router";
 
-const Navbar = function () {
+function Navbar() {
 	return (
 		<header>
 			<nav>

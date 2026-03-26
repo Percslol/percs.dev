@@ -1,4 +1,4 @@
-import { css, type Component } from "dreamland/core";
+import { css, type FC } from "dreamland/core";
 
 type LastFmTrack = {
 	name: string;
@@ -102,18 +102,12 @@ const getAlbumName = (
 	return album["#text"] || null;
 };
 
-const LastFm: Component<
-	{
-		username: string;
-	},
-	{},
-	{
+function LastFm(this: FC<{username: string}, 	{
 		loading: boolean;
 		error: string | null;
 		track: LastFmTrack | null;
-	}
-> = function (cx) {
-	cx.mount = () => {
+	}>) {
+	this.cx.mount = () => {
 		void fetchRecentTrack();
 	};
 

@@ -1,6 +1,4 @@
-import { type Component } from "dreamland/core";
-
-const ContactPage: Component = function () {
+function ContactPage() {
 	return (
 		<div>
 			<h2>contact:</h2>

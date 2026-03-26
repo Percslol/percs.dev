@@ -1,8 +1,7 @@
-import { type Component } from "dreamland/core";
 import LastFm from "../components/LastFm";
-import { WebButton } from "../components/WebButton";
+import WebButton  from "../components/WebButton";
 
-const Homepage: Component = function () {
+function Homepage() {
 	return (
 		<div>
 			<img src="/pfp.webp" alt="percs" height="128px" />

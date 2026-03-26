@@ -1,7 +1,7 @@
-import { css, type Component } from "dreamland/core";
+import { css } from "dreamland/core";
 import { Link } from "dreamland/router";
 
-const NotFound: Component = function () {
+function NotFound() {
 	return (
 		<div>
 			<h2>not found</h2>

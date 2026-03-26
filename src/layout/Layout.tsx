@@ -1,16 +1,14 @@
-import { css, type Component } from "dreamland/core";
+import { css, type FC } from "dreamland/core";
+import type { RouterState } from "dreamland/router";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Layout: Component<
-	{},
-	{ outlet: Element; container: HTMLElement; player: HTMLElement }
-> = function () {
+function Layout(this: FC<{ routerState: RouterState }>) {
 	return (
 		<div>
 			<Navbar />
-			<main this={use(this.container)}>
-				<fieldset>{use(this.outlet)}</fieldset>
+			<main>
+				<fieldset>{use(this.routerState.outlet)}</fieldset>
 			</main>
 			<Footer />
 		</div>

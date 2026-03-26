@@ -1,9 +1,7 @@
-import { css, type Component } from "dreamland/core";
+import { css, type FC } from "dreamland/core";
 import type { Project } from "../Project";
 
-const ProjectView: Component<{
-	project: Project;
-}> = function () {
+function ProjectView(this: FC<{ project: Project }>) {
 	return (
 		<div>
 			<section>

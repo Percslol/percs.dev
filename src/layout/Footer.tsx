@@ -1,5 +1,5 @@
 import { css } from "dreamland/core";
-const Footer = function () {
+function Footer() {
 	return (
 		<footer>
 			<div class="content" title={`built on ${__BUILD_DATE__}`}>

@@ -1,9 +1,7 @@
-import { css, type Component } from "dreamland/core";
+import { css, type FC } from "dreamland/core";
 import projects, { type Project } from "../Project";
 
-const Project: Component<{
-	project: Project;
-}> = function () {
+function Project(this: FC<{ project: Project }>) {
 	return (
 		<a href={`/projects/${this.project.name}`}>
 			<section>
@@ -28,7 +26,7 @@ Project.style = css`
 		padding: 0.5em;
 	}
 `;
-const ProjectsPage: Component = function () {
+function ProjectsPage() {
 	return (
 		<div>
 			{projects.map((project) => (
