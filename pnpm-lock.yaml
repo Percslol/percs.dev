@@ -10,7 +10,7 @@ importers:
     dependencies:
       dreamland:
         specifier: github:MercuryWorkshop/dreamlandjs
-        version: https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/b5b4789b3159da20eab21da500af06c03ecf50b3
+        version: https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/7c5e1fbf6f5d59b27b3eb4452bd720c1eb27897a
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -32,7 +32,7 @@ importers:
         version: 6.0.2
       vite:
         specifier: ^8.0.3
-        version: 8.0.3(@types/node@25.5.0)(esbuild@0.27.3)(terser@5.46.1)
+        version: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@25.5.0)(esbuild@0.27.3)(terser@5.46.1)
 
 packages:
 
@@ -283,8 +283,11 @@ packages:
     peerDependencies:
       rollup: '^0.65.2 || ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0 '
 
-  '@napi-rs/wasm-runtime@1.1.1':
-    resolution: {integrity: sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==}
+  '@napi-rs/wasm-runtime@1.1.2':
+    resolution: {integrity: sha512-sNXv5oLJ7ob93xkZ1XnxisYhGYXfaG9f65/ZgYuAu3qt7b3NadcOEhLvx28hv31PgX8SZJRYrAIPQilQmFpLVw==}
+    peerDependencies:
+      '@emnapi/core': ^1.7.1
+      '@emnapi/runtime': ^1.7.1
 
   '@oxc-project/types@0.122.0':
     resolution: {integrity: sha512-oLAl5kBpV4w69UtFZ9xqcmTi+GENWOcPF7FCrczTiBbmC0ibXxCwyvZGbO39rCVEuLGAZM84DH0pUIyyv/YJzA==}
@@ -630,8 +633,8 @@ packages:
   dot-case@3.0.4:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
 
-  dreamland@https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/b5b4789b3159da20eab21da500af06c03ecf50b3:
-    resolution: {tarball: https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/b5b4789b3159da20eab21da500af06c03ecf50b3}
+  dreamland@https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/7c5e1fbf6f5d59b27b3eb4452bd720c1eb27897a:
+    resolution: {tarball: https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/7c5e1fbf6f5d59b27b3eb4452bd720c1eb27897a}
     version: 0.1.3
 
   entities@4.5.0:
@@ -1249,7 +1252,7 @@ snapshots:
       rollup: 4.59.0
       rollup-pluginutils: 2.8.2
 
-  '@napi-rs/wasm-runtime@1.1.1':
+  '@napi-rs/wasm-runtime@1.1.2(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)':
     dependencies:
       '@emnapi/core': 1.9.1
       '@emnapi/runtime': 1.9.1
@@ -1294,9 +1297,12 @@ snapshots:
   '@rolldown/binding-openharmony-arm64@1.0.0-rc.12':
     optional: true
 
-  '@rolldown/binding-wasm32-wasi@1.0.0-rc.12':
+  '@rolldown/binding-wasm32-wasi@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)':
     dependencies:
-      '@napi-rs/wasm-runtime': 1.1.1
+      '@napi-rs/wasm-runtime': 1.1.2(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
     optional: true
 
   '@rolldown/binding-win32-arm64-msvc@1.0.0-rc.12':
@@ -1482,7 +1488,7 @@ snapshots:
       no-case: 3.0.4
       tslib: 2.8.1
 
-  dreamland@https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/b5b4789b3159da20eab21da500af06c03ecf50b3:
+  dreamland@https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/7c5e1fbf6f5d59b27b3eb4452bd720c1eb27897a:
     dependencies:
       dom-serializer: 2.0.0
       domhandler: 5.0.3
@@ -1799,7 +1805,7 @@ snapshots:
 
   relateurl@0.2.7: {}
 
-  rolldown@1.0.0-rc.12:
+  rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1):
     dependencies:
       '@oxc-project/types': 0.122.0
       '@rolldown/pluginutils': 1.0.0-rc.12
@@ -1816,9 +1822,12 @@ snapshots:
       '@rolldown/binding-linux-x64-gnu': 1.0.0-rc.12
       '@rolldown/binding-linux-x64-musl': 1.0.0-rc.12
       '@rolldown/binding-openharmony-arm64': 1.0.0-rc.12
-      '@rolldown/binding-wasm32-wasi': 1.0.0-rc.12
+      '@rolldown/binding-wasm32-wasi': 1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)
       '@rolldown/binding-win32-arm64-msvc': 1.0.0-rc.12
       '@rolldown/binding-win32-x64-msvc': 1.0.0-rc.12
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
 
   rollup-pluginutils@2.8.2:
     dependencies:
@@ -1902,18 +1911,21 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite@8.0.3(@types/node@25.5.0)(esbuild@0.27.3)(terser@5.46.1):
+  vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@25.5.0)(esbuild@0.27.3)(terser@5.46.1):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
       postcss: 8.5.8
-      rolldown: 1.0.0-rc.12
+      rolldown: 1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)
       tinyglobby: 0.2.15
     optionalDependencies:
       '@types/node': 25.5.0
       esbuild: 0.27.3
       fsevents: 2.3.3
       terser: 5.46.1
+    transitivePeerDependencies:
+      - '@emnapi/core'
+      - '@emnapi/runtime'
 
   which@2.0.2:
     dependencies:
