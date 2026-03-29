@@ -1,7 +1,7 @@
 import { css, type FC } from "dreamland/core";
 import projects, { type Project } from "../Project";
 
-function Project(this: FC<{ project: Project }>) {
+function ProjectCard(this: FC<{ project: Project }>) {
 	return (
 		<a href={`/projects/${this.project.name}`}>
 			<section>
@@ -12,7 +12,7 @@ function Project(this: FC<{ project: Project }>) {
 		</a>
 	);
 };
-Project.style = css`
+ProjectCard.style = css`
 	a {
 		text-decoration: none;
 		color: inherit;
@@ -30,7 +30,7 @@ function ProjectsPage() {
 	return (
 		<div>
 			{projects.map((project) => (
-				<Project project={project} />
+				<ProjectCard project={project} />
 			))}
 		</div>
 	);
