@@ -16,13 +16,42 @@ function ProjectView(this: FC<{ project: Project }>) {
 	);
 };
 ProjectView.style = css`
-	img,
-	a {
-		padding: 0.5em;
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
 	}
+	
 	img {
 		max-height: 40vh;
-		min-width: min(50rem, 70vw);
+		max-width: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	
+	h2, p {
+		max-width: 100%;
+		word-wrap: break-word;
+	}
+	
+	a {
+		padding: 0.5em 1em;
+		display: inline-block;
+		flex-wrap: wrap;
+	}
+	
+	@media (max-width: 768px) {
+		img {
+			min-width: auto;
+			max-height: 50vh;
+		}
+		
+		a {
+			width: 100%;
+			text-align: center;
+		}
 	}
 `;
 export default ProjectView;

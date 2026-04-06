@@ -15,14 +15,13 @@ function App(this: FC<{ url?: string }>) {
 			<Router initial={this.url ? [this.url, "http://127.0.0.1:5173"] : []}>
 				<Route layout={Layout}>
 					<Route show={<Homepage />} />
-					<Route path="projects" show={<ProjectsPage />}>
-						{...projects.map((project) => (
-							<Route
-								path={project.name}
-								show={<ProjectView project={project} />}
-							/>
-						))}
-					</Route>
+					<Route path="projects" show={<ProjectsPage />} />
+					{...projects.map((project) => (
+						<Route
+							path={`projects/${project.name}`}
+							show={<ProjectView project={project} />}
+						/>
+					))}
 					<Route path="contact" show={<ContactPage />} />
 					<Route path="*" show={<NotFound />} />
 				</Route>
