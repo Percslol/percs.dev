@@ -38,4 +38,57 @@ WebButton.style = css`
 		height: 100%;
 	}
 `;
-export default WebButton;
+
+export function ButtonList(this: FC) {
+	return (
+		<>
+			<WebButton
+				src="https://mercurywork.shop/button.gif"
+				href="https://mercurywork.shop"
+				title="mercury workshop"
+			/>
+			<WebButton
+				src="https://dreamland.js.org/button.png"
+				href="https://dreamland.js.org"
+				title="dreamland.js"
+			/>
+			<WebButton
+				src="https://omada.cafe/omada.gif"
+				href="https://omada.cafe/"
+				title="omada.cafe"
+			/>
+			<WebButton
+				src="https://login.corp.google.com/c/balls.gif"
+				href="https://login.corp.google.com"
+				title="Google Single Sign On"
+			/>
+			<hr />
+			<WebButton
+				src="https://bomberfish.ca/button.gif"
+				href="https://bomberfish.ca"
+				title="BomberFish"
+			/>
+			<WebButton
+				src="https://velzie.rip/88x31.png"
+				href="https://velzie.rip"
+				title="velzie"
+			/>
+			<WebButton
+				src="https://wearr.dev/88x31.gif"
+				href="https://wearr.dev"
+				title="wearr"
+			/>
+			<WebButton
+				src="https://foxmoss.com/foxmossbutton.png"
+				href="https://foxmoss.com"
+				title="foxmoss"
+			/>
+			<WebButton
+				src="https://errorcodezero.dev/button.png"
+				href="https://errorcodezero.dev/"
+				title="errorcodezero"
+			/>
+		</>
+	)
+}
+export default ButtonList;
