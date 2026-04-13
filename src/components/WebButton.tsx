@@ -1,10 +1,12 @@
 import { css, type FC } from "dreamland/core";
-function WebButton(this: FC<{
+function WebButton(
+	this: FC<{
 		src: string;
 		href?: string;
 		alt?: string;
 		title?: string;
-	}>) {
+	}>
+) {
 	this.href = this.href;
 
 	if (this.title) {
@@ -21,7 +23,7 @@ function WebButton(this: FC<{
 			/>
 		</a>
 	);
-};
+}
 
 WebButton.style = css`
 	:scope {
@@ -89,6 +91,6 @@ export function ButtonList(this: FC) {
 				title="errorcodezero"
 			/>
 		</>
-	)
+	);
 }
 export default ButtonList;

@@ -38,6 +38,6 @@ function ContactPage() {
 			</ul>
 		</div>
 	);
-};
+}
 
 export default ContactPage;

@@ -13,7 +13,7 @@ function Layout(this: FC<{ routerState: RouterState }>) {
 			<Footer />
 		</div>
 	);
-};
+}
 
 Layout.style = css`
 	:scope {

@@ -9,7 +9,7 @@ function NotFound() {
 			<Link href="/">go home</Link>
 		</div>
 	);
-};
+}
 NotFound.style = css`
 	:scope {
 		display: flex;

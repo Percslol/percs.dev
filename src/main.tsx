@@ -28,6 +28,6 @@ function App(this: FC<{ url?: string }>) {
 			</Router>
 		</div>
 	);
-};
+}
 
 export default (url?: string) => <App url={url} />;

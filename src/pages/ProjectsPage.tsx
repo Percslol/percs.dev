@@ -12,7 +12,7 @@ function ProjectCard(this: FC<{ project: Project }>) {
 			</section>
 		</Link>
 	);
-};
+}
 ProjectCard.style = css`
 	a {
 		text-decoration: none;
@@ -46,7 +46,7 @@ function ProjectsPage() {
 			))}
 		</div>
 	);
-};
+}
 
 ProjectsPage.style = css`
 	:scope {

@@ -9,7 +9,7 @@ function Footer() {
 			</div>
 		</footer>
 	);
-};
+}
 
 Footer.style = css`
 	.content {

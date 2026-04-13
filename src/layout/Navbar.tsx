@@ -13,7 +13,7 @@ function Navbar() {
 			</nav>
 		</header>
 	);
-};
+}
 
 Navbar.style = css`
 	nav {

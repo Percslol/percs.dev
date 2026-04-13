@@ -102,11 +102,16 @@ const getAlbumName = (
 	return album["#text"] || null;
 };
 
-function LastFm(this: FC<{username: string}, 	{
-		loading: boolean;
-		error: string | null;
-		track: LastFmTrack | null;
-	}>) {
+function LastFm(
+	this: FC<
+		{ username: string },
+		{
+			loading: boolean;
+			error: string | null;
+			track: LastFmTrack | null;
+		}
+	>
+) {
 	this.cx.mount = () => {
 		void fetchRecentTrack();
 	};
@@ -152,51 +157,53 @@ function LastFm(this: FC<{username: string}, 	{
 		}
 	};
 
-	const renderBody = use(this.loading, this.error, this.track).map(
-		([loading, error, track]) => {
-			if (loading) {
-				return <p class="status">checking last.fm...</p>;
-			}
-			if (error) {
-				return <p class="status status-error">{error}</p>;
-			}
-			if (!track) {
-				return <p class="status">no recent scrobbles.</p>;
-			}
-			return (
-				<article class="track">
-					{track.artUrl ? (
-						<img
-							class="art"
-							src={track.artUrl}
-							alt={`Album art for ${track.name}`}
-							width="96"
-							height="96"
-							loading="lazy"
-						/>
-					) : (
-						<div class="art placeholder" aria-hidden="true" />
-					)}
-					<div class="meta">
-						<p class="track-name">{track.name}</p>
-						<p class="artist">by {track.artist}</p>
-						{track.album ? <p class="album">{track.album}</p> : null}
-						<p class="time">
-							{track.nowPlaying
-								? "listening now"
-								: (track.playedAgo ?? "earlier")}
-						</p>
-						<a href={track.url} target="_blank" rel="noreferrer noopener">
-							more info &gt;
-						</a>
-					</div>
-				</article>
-			);
-		}
+	return (
+		<div>
+			{use(this.loading, this.error, this.track).map(
+				([loading, error, track]) => {
+					if (loading) {
+						return <p class="status">checking last.fm...</p>;
+					}
+					if (error) {
+						return <p class="status status-error">{error}</p>;
+					}
+					if (!track) {
+						return <p class="status">no recent scrobbles.</p>;
+					}
+					return (
+						<article class="track">
+							{track.artUrl ? (
+								<img
+									class="art"
+									src={track.artUrl}
+									alt={`Album art for ${track.name}`}
+									width="96"
+									height="96"
+									loading="lazy"
+								/>
+							) : (
+								<div class="art placeholder" aria-hidden="true" />
+							)}
+							<div class="meta">
+								<p class="track-name">{track.name}</p>
+								<p class="artist">by {track.artist}</p>
+								{track.album ? <p class="album">{track.album}</p> : null}
+								<p class="time">
+									{track.nowPlaying
+										? "listening now"
+										: (track.playedAgo ?? "earlier")}
+								</p>
+								<a href={track.url} target="_blank" rel="noreferrer noopener">
+									more info &gt;
+								</a>
+							</div>
+						</article>
+					);
+				}
+			)}
+		</div>
 	);
-
-	return <div>{renderBody}</div>;
-};
+}
 
 LastFm.style = css`
 	:scope {

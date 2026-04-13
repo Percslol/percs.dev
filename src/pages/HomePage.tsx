@@ -27,6 +27,6 @@ function Homepage() {
 			</section>
 		</div>
 	);
-};
+}
 
 export default Homepage;
