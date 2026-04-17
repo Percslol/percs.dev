@@ -18,7 +18,7 @@ function App(this: FC<{ url?: string }>) {
 					<Route path="projects" show={<ProjectsPage />} />
 					{...projects.map((project) => (
 						<Route
-							path={`projects/${project.name}`}
+							path={`project/${project.name}`}
 							show={<ProjectView project={project} />}
 						/>
 					))}

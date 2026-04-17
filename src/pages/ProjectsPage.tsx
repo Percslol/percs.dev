@@ -4,7 +4,7 @@ import projects, { type Project } from "../Project";
 
 function ProjectCard(this: FC<{ project: Project }>) {
 	return (
-		<Link class="remove-styles" href={`/projects/${this.project.name}`}>
+		<Link class="remove-styles" href={`/project/${this.project.name}`}>
 			<section>
 				<img src={`/thumbnails/${this.project.name}.png`} />
 				<h2>{this.project.name}</h2>
