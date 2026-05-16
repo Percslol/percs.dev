@@ -64,6 +64,9 @@ export function ButtonList(this: FC) {
 				href="https://login.corp.google.com"
 				title="Google Single Sign On"
 			/>
+			<a href='https://ko-fi.com/O5O71ZMVRJ' target='_blank'>
+				<img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/brandasset/v2/support_me_on_kofi_dark.png' border='0' alt='donate to percs on ko-fi' />
+			</a>
 			<hr />
 			<WebButton
 				src="https://bomberfish.ca/button.gif"
