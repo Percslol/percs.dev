@@ -20,6 +20,7 @@ function WebButton(
 				src={this.src}
 				alt={this.alt || "A web button."}
 				title={this.title || this.alt || ""}
+				onerror="this.style.display='none'"
 			/>
 		</a>
 	);
