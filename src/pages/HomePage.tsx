@@ -4,7 +4,7 @@ import ButtonList from "../components/WebButton";
 function Homepage() {
 	return (
 		<div>
-			<img src="/pfp.webp" alt="percs" height="128px" />
+			<img src="/pfp.webp" alt="percs" height="256px" />
 			<section>
 				<h3>about me</h3>
 				<p>hey! welcome to my little corner of the internet :3</p>
