@@ -5,8 +5,16 @@ function WebButton(
 		href?: string;
 		alt?: string;
 		title?: string;
+	}, {
+		image: HTMLImageElement;
 	}>
 ) {
+	this.cx.mount = () => {
+		this.image.addEventListener("error", () => {
+			this.root.style.display = "none";
+		});
+	}
+	
 	this.href = this.href;
 
 	if (this.title) {
@@ -20,7 +28,7 @@ function WebButton(
 				src={this.src}
 				alt={this.alt || "A web button."}
 				title={this.title || this.alt || ""}
-				onerror="this.style.display='none'"
+				this={use(this.image)}
 			/>
 		</a>
 	);
