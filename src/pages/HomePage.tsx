@@ -15,7 +15,7 @@ function Homepage() {
 					own personal projects.
 				</p>
 				<p>i'm interested in webdev, hardware, and architecture design.</p>
-				<p>i'm fluent in javascript, and i'm also learning rust and c.</p>
+				<p>my main languages are javascript and go, and i'm also learning rust and c.</p>
 			</section>
 			<section>
 				<h3>music</h3>
