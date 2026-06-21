@@ -27,10 +27,10 @@ function ContactPage() {
 				<li>
 					<a href="https://bsky.app/profile/did:plc:oo7qxx7qeuu77cy74n7mxprf">
 						bluesky
-					</a> (i dont use this much but i think the tech is cool)
+					</a> (i dont use this much, but i think atproto is cool)
 				</li>
 				<li>
-					<a href="https://fedi.omada.cafe/@percs">fediverse</a> (i dont use this much but you can find me here too)
+					<a href="https://fedi.omada.cafe/@percs">fediverse</a> (i dont use this much at all)
 				</li>
 				<li>
 					<a href="https://steamcommunity.com/id/percslol">steam</a> (i play games here, probably a bit too much)
