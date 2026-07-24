@@ -102,6 +102,11 @@ export function ButtonList(this: FC) {
 				href="https://errorcodezero.dev/"
 				title="errorcodezero"
 			/>
+			<WebButton
+				src="https://3kh0.net/button.png"
+				href="https://3kh0.net"
+				title="3kh0"
+			/>
 		</>
 	);
 }

@@ -18,12 +18,12 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"@literals/rollup-plugin-html-css-minifier": "^4.0.1",
-		"@types/node": "^25.5.2",
-		"eslint": "^10.2.0",
-		"prettier": "^3.8.1",
-		"typescript": "^6.0.3",
-		"vite": "^8.0.16"
+		"@literals/rollup-plugin-html-css-minifier": "^4.0.2",
+		"@types/node": "^26.1.1",
+		"eslint": "^10.7.0",
+		"prettier": "^3.9.6",
+		"typescript": "^7.0.2",
+		"vite": "^8.1.5"
 	},
 	"dependencies": {
 		"dreamland": "github:MercuryWorkshop/dreamlandjs"

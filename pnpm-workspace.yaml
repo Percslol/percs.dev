@@ -1,3 +1,6 @@
+allowBuilds:
+  dreamland: true
+  
 onlyBuiltDependencies:
   - esbuild
   - dreamland
