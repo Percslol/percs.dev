@@ -1,5 +1,5 @@
 allowBuilds:
-  dreamland: true
+  dreamland@https://codeload.github.com/MercuryWorkshop/dreamlandjs/tar.gz/9dfb8bc19b186d955d8fed4cee4aa4a19197d778: true
   
 onlyBuiltDependencies:
   - esbuild
