@@ -11,11 +11,16 @@ function Homepage() {
 				<p>i'm percs, a 16 y/o developer living in texas!</p>
 				<p>
 					i make cool software with{" "}
-					<a href="https://mercurywork.shop" target="_blank">mercury workshop</a> and work on my
-					own personal projects.
+					<a href="https://mercurywork.shop" target="_blank">
+						mercury workshop
+					</a>{" "}
+					and work on my own personal projects.
 				</p>
 				<p>i'm interested in webdev, hardware, and architecture design.</p>
-				<p>my main languages are javascript and go, and i'm also learning rust and c.</p>
+				<p>
+					my main languages are javascript and go, and i'm also learning rust
+					and c.
+				</p>
 			</section>
 			<section>
 				<h3>music</h3>
