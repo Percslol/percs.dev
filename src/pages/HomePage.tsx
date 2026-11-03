@@ -8,13 +8,13 @@ function Homepage() {
 			<section>
 				<h3>about me</h3>
 				<p>hey! welcome to my little corner of the internet :3</p>
-				<p>i'm percs, a 16 y/o developer living in texas!</p>
+				<p>i'm percs, a 17 y/o developer living in texas!</p>
 				<p>
 					i make cool software with{" "}
 					<a href="https://mercurywork.shop" target="_blank">
 						mercury workshop
 					</a>{" "}
-					and work on my own personal projects.
+					and maintain various open source projects.
 				</p>
 				<p>i'm interested in webdev, hardware, and architecture design.</p>
 				<p>
