@@ -67,31 +67,8 @@ export function ButtonList(this: FC) {
 				feel free to add <a href="https://percs.dev/button.gif">my button</a> to
 				your site if i know you, hotlinking is preferred
 			</sup>
-			<br />
-			<div class="button-list">
-				<WebButton
-					src="https://mercurywork.shop/button.gif"
-					href="https://mercurywork.shop"
-					title="mercury workshop"
-				/>
-				<WebButton
-					src="https://dreamland.js.org/button.png"
-					href="https://dreamland.js.org"
-					title="dreamland.js"
-				/>
-				<WebButton
-					src="https://omada.cafe/omada.gif"
-					href="https://omada.cafe/"
-					title="omada.cafe"
-				/>
-				<WebButton
-					src="https://login.corp.google.com/c/balls.gif"
-					href="https://login.corp.google.com"
-					title="Google Single Sign On"
-				/>
-			</div>
-			<hr />
-			<div class="button-list">
+      <br />
+      <div class="button-list">
 				<WebButton
 					src="https://bomberfish.ca/button.gif"
 					href="https://bomberfish.ca"
@@ -121,6 +98,34 @@ export function ButtonList(this: FC) {
 					src="https://3kh0.net/button.png"
 					href="https://3kh0.net"
 					title="3kh0"
+           />
+           <WebButton
+             src="https://lunarion31.dev/static/img/buttons/lumi.gif"
+             href="https://lunarion31.dev/"
+             title="Lumi"
+           />
+      </div>
+			<hr />
+			<div class="button-list">
+				<WebButton
+					src="https://mercurywork.shop/button.gif"
+					href="https://mercurywork.shop"
+					title="mercury workshop"
+				/>
+				<WebButton
+					src="https://dreamland.js.org/button.png"
+					href="https://dreamland.js.org"
+					title="dreamland.js"
+				/>
+				<WebButton
+					src="https://omada.cafe/omada.gif"
+					href="https://omada.cafe/"
+					title="omada.cafe"
+        />
+				<WebButton
+					src="https://login.corp.google.com/c/balls.gif"
+					href="https://login.corp.google.com"
+					title="Google Single Sign On"
 				/>
 			</div>
 		</div>
